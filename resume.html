@@ -1,4 +1,214 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Resume | Sai Teja Bandaru</title><meta name="description" content="Resume for Sai Teja Bandaru, Generative AI Engineer."/><link rel="icon" href="assets/img/favicon.svg"/><link rel="stylesheet" href="assets/css/styles.css"/></head><body><canvas id="orb-canvas" aria-hidden="true"></canvas><div class="cursor-glow" aria-hidden="true"></div><div class="progress-bar" aria-hidden="true"></div><header class="site-header"><nav class="container nav"><a class="logo" href="index.html"><span class="logo-mark">AI</span><span>Sai Teja Bandaru<span class="logo-sub">Generative AI Engineer</span></span></a><button class="nav-toggle" aria-label="Toggle navigation">☰</button><div class="nav-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a><a href="experience.html">Experience</a><a class="active" href="resume.html">Resume</a><a href="contact.html">Contact</a></div></nav></header><main>
-<section class="page-hero"><div class="container reveal"><span class="kicker">Resume</span><h1><span class="gradient-text">Download</span> my GenAI resume.</h1><p class="lead">Resume focused on Generative AI engineering, RAG, agentic AI, Azure OpenAI, fine-tuning, MLOps, and production AI systems.</p><div class="hero-actions"><a class="btn primary" href="assets/resume/Sai_Teja_Bandaru_GenAI_Engineer_Resume.pdf">Download PDF</a><a class="btn" href="assets/resume/Sai_Teja_Bandaru_GenAI_Engineer_Resume.docx">Download DOCX</a><a class="btn ghost" href="contact.html">Contact</a></div></div></section>
-<section class="section"><div class="container reveal"><object class="resume-frame" data="assets/resume/Sai_Teja_Bandaru_GenAI_Engineer_Resume.pdf" type="application/pdf"><p class="muted">Your browser may not show embedded PDFs. <a href="assets/resume/Sai_Teja_Bandaru_GenAI_Engineer_Resume.pdf">Download the PDF resume here.</a></p></object></div></section>
-</main><footer class="site-footer"><div class="container footer-row"><span>© <span data-year></span> Sai Teja Bandaru</span><div class="footer-links"><a href="https://github.com/saitejastb23-hub">GitHub</a><a href="https://www.linkedin.com/in/sai-teja-b-635824160/">LinkedIn</a><a href="mailto:saitejastb23@gmail.com">Email</a></div></div></footer><script src="assets/js/main.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume | Sai Teja Bandaru</title>
+  <meta name="description" content="Recruiter-ready resume page for Sai Teja Bandaru, Generative AI Engineer specializing in RAG, agentic AI, LLMOps, Azure OpenAI, and fine-tuning." />
+  <link rel="icon" href="assets/img/favicon.svg" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <style>
+    .resume-premium-hero { padding: 86px 0 42px; position: relative; }
+    .resume-hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 28px; align-items: stretch; }
+    .resume-title { font-size: clamp(2.65rem, 6vw, 5.3rem); margin-bottom: 18px; }
+    .resume-subtitle { max-width: 780px; color: var(--muted); font-size: 1.18rem; }
+    .resume-badges { display: flex; flex-wrap: wrap; gap: 10px; margin: 26px 0 0; }
+    .resume-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 999px; border: 1px solid rgba(34,211,238,.23); background: rgba(34,211,238,.075); color: #c8f7ff; font-weight: 900; font-size: .86rem; }
+    .resume-badge::before { content: ""; width: 7px; height: 7px; border-radius: 999px; background: var(--brand-3); box-shadow: 0 0 14px rgba(34,197,94,.8); }
+
+    .resume-command-card { position: relative; border: 1px solid rgba(255,255,255,.16); border-radius: 30px; padding: 24px; background: linear-gradient(160deg, rgba(255,255,255,.105), rgba(255,255,255,.045)); box-shadow: var(--shadow); overflow: hidden; }
+    .resume-command-card::before { content:""; position:absolute; inset:-2px; background: radial-gradient(circle at 20% 0%, rgba(34,211,238,.22), transparent 32%), radial-gradient(circle at 100% 100%, rgba(139,92,246,.2), transparent 38%); pointer-events:none; }
+    .resume-command-card > * { position: relative; z-index: 1; }
+    .command-top { display: flex; justify-content: space-between; gap: 12px; align-items: center; margin-bottom: 20px; }
+    .command-title { color: #dffbff; font-weight: 950; letter-spacing: -.02em; }
+    .mini-pill { border: 1px solid rgba(34,197,94,.25); background: rgba(34,197,94,.09); color: #bbf7d0; padding: 6px 10px; border-radius: 999px; font-size: .78rem; font-weight: 950; }
+    .resume-terminal-lines { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; display:grid; gap: 10px; padding: 18px; border-radius: 22px; background: rgba(0,0,0,.34); border: 1px solid rgba(255,255,255,.12); color: #a5f3fc; }
+    .resume-terminal-lines span { display:block; }
+    .resume-terminal-lines b { color: #fff; font-weight: 900; }
+
+    .resume-metrics { display:grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 28px; }
+    .resume-metric { border: 1px solid rgba(255,255,255,.13); border-radius: 22px; padding: 18px; background: rgba(255,255,255,.06); box-shadow: 0 18px 48px rgba(0,0,0,.18); }
+    .resume-metric strong { display:block; color:#fff; font-size: 1.85rem; line-height: 1; letter-spacing: -.06em; }
+    .resume-metric span { display:block; margin-top: 8px; color: var(--muted); font-size: .9rem; }
+
+    .resume-dashboard { display:grid; grid-template-columns: .78fr 1.22fr; gap: 24px; align-items:start; }
+    .resume-side { display:grid; gap: 18px; position: sticky; top: 104px; }
+    .resume-panel { border: 1px solid rgba(255,255,255,.14); border-radius: 28px; padding: 22px; background: linear-gradient(180deg, rgba(255,255,255,.087), rgba(255,255,255,.045)); box-shadow: 0 18px 55px rgba(0,0,0,.18); }
+    .resume-panel h3 { margin-bottom: 10px; }
+    .resume-panel p { color: var(--muted); margin: 0; }
+    .action-stack { display:grid; gap: 10px; margin-top: 18px; }
+    .action-stack .btn { width: 100%; }
+    .resume-focus-list { display:grid; gap: 12px; margin-top: 16px; }
+    .resume-focus-item { display:flex; gap: 12px; align-items:flex-start; padding: 13px; border-radius: 18px; background: rgba(255,255,255,.055); border: 1px solid rgba(255,255,255,.105); }
+    .focus-token { flex: 0 0 auto; width: 42px; height: 42px; border-radius: 14px; display:grid; place-items:center; font-weight: 950; color: #031018; background: linear-gradient(135deg, var(--brand), var(--brand-2)); }
+    .resume-focus-item strong { display:block; color:#fff; margin-bottom: 2px; }
+    .resume-focus-item span { color: var(--muted); font-size: .9rem; line-height:1.45; }
+
+    .resume-preview-shell { position: relative; border: 1px solid rgba(255,255,255,.16); border-radius: 32px; background: rgba(255,255,255,.07); box-shadow: var(--shadow), var(--glow); overflow:hidden; }
+    .resume-preview-top { display:flex; align-items:center; justify-content:space-between; gap:12px; padding: 15px 18px; border-bottom: 1px solid rgba(255,255,255,.12); background: rgba(5,8,20,.74); backdrop-filter: blur(16px); }
+    .resume-preview-title { display:flex; align-items:center; gap: 10px; font-weight: 950; color:#e9fbff; }
+    .resume-preview-title::before { content:""; width: 10px; height: 10px; border-radius: 999px; background: #22c55e; box-shadow: 0 0 16px rgba(34,197,94,.8); }
+    .preview-tools { display:flex; gap:7px; }
+    .preview-tools span { width:10px; height:10px; border-radius:999px; background: rgba(255,255,255,.28); }
+    .resume-frame.premium { min-height: 980px; border: 0; border-radius: 0; background:#fff; box-shadow:none; display:block; }
+    .resume-preview-note { display:flex; justify-content:space-between; align-items:center; gap: 16px; flex-wrap: wrap; padding: 16px 18px; border-top: 1px solid rgba(255,255,255,.12); background: rgba(5,8,20,.72); color: var(--muted); font-size: .93rem; }
+
+    .resume-section-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .resume-highlight-card { border: 1px solid rgba(255,255,255,.13); border-radius: 24px; padding: 20px; background: rgba(255,255,255,.06); transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease; }
+    .resume-highlight-card:hover { transform: translateY(-6px); border-color: rgba(34,211,238,.35); box-shadow: var(--glow); }
+    .resume-highlight-card h3 { font-size: 1.1rem; margin-bottom: 8px; }
+    .resume-highlight-card p { color: var(--muted); margin: 0; }
+
+    .keyword-marquee { position: relative; overflow:hidden; border:1px solid rgba(255,255,255,.12); border-radius: 26px; background: rgba(255,255,255,.055); padding: 16px; }
+    .keyword-track { display:flex; gap:10px; flex-wrap: wrap; }
+    .keyword-track .tag { margin:0; }
+
+    @media (max-width: 1040px) {
+      .resume-hero-grid, .resume-dashboard { grid-template-columns: 1fr; }
+      .resume-side { position: static; }
+      .resume-metrics { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 760px) {
+      .resume-premium-hero { padding-top: 58px; }
+      .resume-metrics, .resume-section-grid { grid-template-columns: 1fr; }
+      .resume-frame.premium { min-height: 620px; }
+      .resume-command-card, .resume-panel { border-radius: 24px; }
+    }
+  </style>
+</head>
+<body>
+<canvas id="orb-canvas" aria-hidden="true"></canvas><div class="cursor-glow" aria-hidden="true"></div><div class="progress-bar" aria-hidden="true"></div>
+<header class="site-header">
+  <nav class="container nav">
+    <a class="logo" href="index.html"><span class="logo-mark">AI</span><span>Sai Teja Bandaru<span class="logo-sub">Generative AI Engineer</span></span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    <div class="nav-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a><a href="experience.html">Experience</a><a class="active" href="resume.html">Resume</a><a href="contact.html">Contact</a></div>
+  </nav>
+</header>
+<main>
+  <section class="resume-premium-hero">
+    <div class="container resume-hero-grid">
+      <div class="reveal">
+        <span class="eyebrow"><span class="pulse-dot"></span> Recruiter-ready GenAI resume</span>
+        <h1 class="resume-title"><span class="gradient-text">Resume built for</span> production AI roles.</h1>
+        <p class="resume-subtitle">A focused Generative AI Engineer profile covering production RAG, agentic AI workflows, Azure OpenAI, LoRA/PEFT fine-tuning, LLMOps, evaluation, guardrails, and deployment-ready AI systems.</p>
+        <div class="resume-badges">
+          <span class="resume-badge">GenAI Engineer</span>
+          <span class="resume-badge">RAG + Agents</span>
+          <span class="resume-badge">Azure OpenAI</span>
+          <span class="resume-badge">LLMOps</span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn primary" href="assets/resume/Sai_Teja_Bandaru_GenAI_Engineer_Resume.pdf" target="_blank" rel="noreferrer">Open Resume PDF</a>
+          <a class="btn" href="assets/resume/Sai_Teja_Bandaru_GenAI_Engineer_Resume.pdf" download>Download PDF</a>
+          <a class="btn ghost" href="assets/resume/Sai_Teja_Bandaru_GenAI_Engineer_Resume.docx" download>Download DOCX</a>
+        </div>
+      </div>
+      <aside class="resume-command-card reveal delay-1">
+        <div class="command-top"><span class="command-title">resume_match.run</span><span class="mini-pill">OPEN TO ROLES</span></div>
+        <div class="resume-terminal-lines">
+          <span>$ scan --target <b>GenAI Engineer</b></span>
+          <span>&gt; systems: <b>RAG • Agents • Fine-tuning • LLMOps</b></span>
+          <span>&gt; stack: <b>Python • LangChain • LangGraph • Azure OpenAI</b></span>
+          <span>&gt; focus: <b>reliable AI systems for regulated workflows</b></span>
+        </div>
+        <div class="resume-metrics">
+          <div class="resume-metric"><strong>5+</strong><span>years AI/ML experience</span></div>
+          <div class="resume-metric"><strong>40%</strong><span>manual review reduction</span></div>
+          <div class="resume-metric"><strong>35%</strong><span>hallucination reduction</span></div>
+          <div class="resume-metric"><strong>45%</strong><span>inference cost reduction</span></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Resume focus</span>
+        <h2>Designed to show production GenAI depth quickly.</h2>
+        <p>Recruiters and hiring managers can scan the page, download the resume, open GitHub projects, and understand the connection between your experience and your portfolio.</p>
+      </div>
+      <div class="resume-section-grid">
+        <article class="resume-highlight-card reveal"><h3>Production RAG</h3><p>Source-grounded retrieval systems with vector search, citations, hallucination controls, and evaluation checks.</p></article>
+        <article class="resume-highlight-card reveal delay-1"><h3>Agentic AI</h3><p>LangGraph-style workflows with planner, retrieval, tools, compliance checks, and human-in-the-loop validation.</p></article>
+        <article class="resume-highlight-card reveal delay-2"><h3>Fine-tuning + LLMOps</h3><p>LoRA/PEFT tuning, model routing, MLflow workflows, Dockerized APIs, CI/CD, monitoring, and deployment readiness.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container resume-dashboard">
+      <aside class="resume-side reveal">
+        <div class="resume-panel">
+          <span class="kicker">Quick actions</span>
+          <h3>Resume links</h3>
+          <p>Use the PDF for applications and the DOCX when a recruiter asks for an editable copy.</p>
+          <div class="action-stack">
+            <a class="btn primary" href="assets/resume/Sai_Teja_Bandaru_GenAI_Engineer_Resume.pdf" target="_blank" rel="noreferrer">View PDF</a>
+            <a class="btn" href="assets/resume/Sai_Teja_Bandaru_GenAI_Engineer_Resume.pdf" download>Download PDF</a>
+            <a class="btn ghost" href="assets/resume/Sai_Teja_Bandaru_GenAI_Engineer_Resume.docx" download>Download DOCX</a>
+          </div>
+        </div>
+
+        <div class="resume-panel">
+          <span class="kicker">Profile links</span>
+          <h3>Connect the full profile</h3>
+          <div class="action-stack">
+            <a class="btn" href="https://github.com/saitejastb23-hub" target="_blank" rel="noreferrer">GitHub Portfolio →</a>
+            <a class="btn" href="https://www.linkedin.com/in/sai-teja-b-635824160/" target="_blank" rel="noreferrer">LinkedIn Profile →</a>
+            <a class="btn ghost" href="mailto:saitejastb23@gmail.com">Email Me →</a>
+          </div>
+        </div>
+
+        <div class="resume-panel">
+          <span class="kicker">Experience map</span>
+          <h3>What this resume signals</h3>
+          <div class="resume-focus-list">
+            <div class="resume-focus-item"><span class="focus-token">RAG</span><div><strong>Retrieval systems</strong><span>Semantic search, source citations, vector databases, grounding, evaluation.</span></div></div>
+            <div class="resume-focus-item"><span class="focus-token">AI</span><div><strong>Agent workflows</strong><span>LangChain, LangGraph, OpenAI Agents SDK, tools, routing, HITL.</span></div></div>
+            <div class="resume-focus-item"><span class="focus-token">Ops</span><div><strong>Deployment</strong><span>FastAPI, Docker, Kubernetes, Azure OpenAI, MLflow, CI/CD.</span></div></div>
+          </div>
+        </div>
+      </aside>
+
+      <div class="resume-preview-shell reveal delay-1">
+        <div class="resume-preview-top">
+          <div class="resume-preview-title">Sai_Teja_Bandaru_GenAI_Engineer_Resume.pdf</div>
+          <div class="preview-tools"><span></span><span></span><span></span></div>
+        </div>
+        <object class="resume-frame premium" data="assets/resume/Sai_Teja_Bandaru_GenAI_Engineer_Resume.pdf#toolbar=0&navpanes=0" type="application/pdf">
+          <p class="muted" style="padding: 28px;">Your browser may not show embedded PDFs. <a href="assets/resume/Sai_Teja_Bandaru_GenAI_Engineer_Resume.pdf">Open the resume PDF here.</a></p>
+        </object>
+        <div class="resume-preview-note">
+          <span>Tip: open the PDF in a new tab for the cleanest full-page view.</span>
+          <a class="card-link" href="assets/resume/Sai_Teja_Bandaru_GenAI_Engineer_Resume.pdf" target="_blank" rel="noreferrer">Open full resume →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal"><span class="kicker">ATS keyword coverage</span><h2>GenAI keywords recruiters search for.</h2><p>These keywords connect the resume, GitHub projects, LinkedIn profile, and portfolio website together.</p></div>
+      <div class="keyword-marquee reveal delay-1">
+        <div class="keyword-track">
+          <span class="tag">Generative AI</span><span class="tag">Large Language Models</span><span class="tag">RAG</span><span class="tag">LangChain</span><span class="tag">LangGraph</span><span class="tag">Azure OpenAI</span><span class="tag">OpenAI API</span><span class="tag">LLMOps</span><span class="tag">LoRA</span><span class="tag">PEFT</span><span class="tag">Vector Databases</span><span class="tag">FAISS</span><span class="tag">Pinecone</span><span class="tag">Weaviate</span><span class="tag">FastAPI</span><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">MLflow</span><span class="tag">Hugging Face</span><span class="tag">Prompt Engineering</span><span class="tag">Guardrails</span><span class="tag">Evaluation</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container callout reveal">
+      <span class="kicker">Ready for recruiter review</span>
+      <h2>Looking for GenAI Engineer, LLM Engineer, Applied AI Engineer, and AI Platform roles.</h2>
+      <p>This resume page is built to support applications, recruiter outreach, and LinkedIn Featured links with a clean, high-signal summary of your GenAI positioning.</p>
+      <div class="hero-actions"><a class="btn primary" href="contact.html">Contact Me</a><a class="btn" href="projects.html">View Projects</a></div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer"><div class="container footer-row"><span>© <span data-year></span> Sai Teja Bandaru</span><div class="footer-links"><a href="https://github.com/saitejastb23-hub">GitHub</a><a href="https://www.linkedin.com/in/sai-teja-b-635824160/">LinkedIn</a><a href="mailto:saitejastb23@gmail.com">Email</a></div></div></footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
